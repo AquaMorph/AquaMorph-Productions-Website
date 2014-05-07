@@ -1,0 +1,41 @@
+/*  
+Theme Name: AquaMorph Productions Theme
+Theme URI: http://aquamorphproductions.com/
+Description: AquaMorph Productions Theme
+Version: 4.0.0
+Author: Christian Colglazier
+Author URI: http://aquamorphproductions.com/
+
+Pink: f49ac1
+Light Pink: f1b7d0
+Blue: 3ea9f5
+Light Blue: 6dcff6
+
+*/
+/* Body */
+#body {
+	padding:0;
+	margin:0;
+}
+
+
+
+/* Header and Menu */
+#menu {
+	width:100%;
+	background-color:#6dcff6;
+	padding:0;
+	margin:0;
+}
+#menu ul {
+	color:#FFFFFF;
+}
+#menu ul li {
+	display:inline;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+#menu ul li a {
+	color:#FFFFFF;
+}
+	
