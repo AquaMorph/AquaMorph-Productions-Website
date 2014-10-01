@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 
-
 <head>
 <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -15,7 +14,6 @@
 <?php wp_head(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 </head>
-
 
 <body>
 <?php get_header(); ?>
