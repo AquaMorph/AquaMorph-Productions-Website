@@ -22,7 +22,7 @@
 <div class="wrapper">
 	<div class="entry-list">
 		<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-        <div id="section">
+        <div class="section">
     	    <div class="video-container">
             	<div>
 					<?php if ( p75HasVideo($post->ID) ) {echo p75GetVideo($post->ID);} else {the_post_thumbnail('post-feature');} ?>
