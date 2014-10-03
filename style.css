@@ -114,10 +114,12 @@ body {
 	display:table-cell; 
 	vertical-align:middle; 
 }
-.section h1 a {
+.section a {
+	text-decoration:none;
+}
+.section a h1 {
 	color:#fff;
 	text-decoration:none;
-	padding:1em 1em 1em 1em;
 	margin: 0 auto 0 auto;
 }
 .navigation {
@@ -125,14 +127,21 @@ body {
 }
 .navigation a, .navigation a:visited {
 	box-shadow: 0 .2em .5em #888888;
-	background-color:#f1b7d0;
+	background-color:#f49ac1;
 	color:#FFFFFF;
+	text-align:center;
 	text-decoration:none;
 	padding: 1em .5em 1em .5em;
-	margin: 1em 0 1em 0;
+	width:45%;
 }
 .navigation a:hover {
-	background-color:#f49ac1;
+	background-color:#f1b7d0;
+}
+.navigation #right a {
+	float:right;
+}
+.navigation #left a {
+	float:left;
 }
 .footer {
 	width:100%;

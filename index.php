@@ -19,19 +19,22 @@
 
 <body>
 <?php get_header(); ?>
-<div class="wrapper">
+<div class="wrapper" style="margin-bottom:6em">
 	<div class="entry-list">
 		<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
         <div class="section">
     	    <div class="video-container">
             	<div>
-					<?php if ( p75HasVideo($post->ID) ) {echo p75GetVideo($post->ID);} else {the_post_thumbnail('post-feature');} ?>
+					<?php if ( p75HasVideo($post->ID) ) {echo p75GetVideo($post->ID);} else {echo"<a href='";the_permalink(); echo"'>"; the_post_thumbnail('post-feature'); echo "</a>";} ?>
                 </div>
             </div>
-            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
         </div>
         <?php endwhile; ?>
-        <div class="navigation"><?php posts_nav_link('&nbsp;','Previous Page','Next Page'); ?></p></div>
+        <div class="navigation">
+        	<div id="left"><?php previous_posts_link('Previous Page','max_pages'); ?></div>
+        	<div id="right"><?php next_posts_link('Next Page') ?></div>
+        </div>
         <?php endif; ?>
     	</div>
     </div>
