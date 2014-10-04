@@ -10,8 +10,8 @@ Pink: f49ac1
 Light Pink: f1b7d0
 Blue: 3ea9f5
 Light Blue: 6dcff6
-
 */
+
 /* Body */
 html {
 	width:100%;
@@ -32,7 +32,10 @@ body {
 
 
 /* Header and Menu */
-.header{
+#mobile {
+	display:none;
+}
+.header {
 	position:fixed;
 	display:inline-block;
 	background:#3ea9f5;
@@ -56,12 +59,11 @@ body {
 }
 .header li {
 	display:inline-block;
-	margin:0 1% 0 1%;
 	text-align:center;
 	padding: 0;
 }
 .header li a,.header li a:visited {
-	padding:1em 0 1em 0;	
+	padding:1em .5em 1em .5em;	
 	font-size:1.4em;
 	display:inline-block;
 	text-decoration:none;
@@ -75,6 +77,74 @@ body {
 	-webkit-box-sizing:border-box;
 	border-bottom:0.2em solid #fff;
 }
+.header ul ul {
+	visibility:hidden;
+	background:#6dcff6;
+	box-shadow: 0 .1em .5em #888888;
+	position:absolute;
+	top:4.6em;
+}
+.header ul ul li a{
+	border-bottom:0.2em solid #6dcff6;
+}
+.header ul li:hover ul {
+	visibility:visible;
+}
+@media all and (max-width: 42em) {
+	#mobile {
+		display:inline;
+	}
+	#mobile h1 {
+		height:100%;
+		display:table-cell; 
+		vertical-align:middle;
+		margin:0 0 0 0;
+	}
+	#mobile a {
+		text-decoration:none;
+		color:#ffffff;
+	}
+	#box {
+		float:right;
+		padding:0.5em .5em .5em .5em;
+		height:3em;
+		width:3em;
+		background-color:#D91E21;
+	}
+	.header {
+		height:4em;
+	}
+	.header:active ul {
+		
+	}
+	.header:hover ul ul {
+		display:none;
+	}
+	.header #menu {
+		display:none;
+	}
+	.header ul {
+		top:1.7em;
+	}
+    .header li {
+		position: relative;
+		display:block;
+		background-color:#6dcff6;
+		padding:0 0 0 0;
+		margin:0 0 0 0;
+	}
+    .header li a { 
+		width:100%;
+		padding:.4em 0 .4em 0;
+	} 
+	.header ul ul {
+		visibility:hidden;
+	}
+	.header ul li:hover ul {
+		visibility:hidden;
+	}
+}
+/* Content */
 .wrapper {
 	padding-top:5em;
 	max-width:50em;
@@ -108,7 +178,7 @@ body {
 	height:100%;
 }
 .section h1 {
-	height:5em;
+	height:4em;
 	width:40em;
 	text-align:center;
 	display:table-cell; 
@@ -143,6 +213,7 @@ body {
 .navigation #left a {
 	float:left;
 }
+/* Footer */
 .footer {
 	width:100%;
 	background:#3ea9f5;
