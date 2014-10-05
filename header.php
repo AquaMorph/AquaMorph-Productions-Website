@@ -6,11 +6,23 @@ function toggleVisibility(id) {
        else
           e.style.display = 'block';
     }
+var mql = window.matchMedia("(min-width:42em)");
+mql.addListener(function(e){
+	if(e.matches) {
+		document.getElementById('menu').style.display = 'block';
+	}
+});
+var mql = window.matchMedia("(max-width:42em)");
+mql.addListener(function(e){
+	if(e.matches) {
+		document.getElementById('menu').style.display = 'none';
+	}
+});
 </script>
 <div class="header">
 	<div id="mobile">
-    	<div id="box" onClick="toggleVisibility('menu')"></div>
-    	<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+    	<div id="box" onClick="toggleVisibility('menu')"><div id="line"></div><div id="line"></div><div id="line"></div></div>
+    	<a href="<?php bloginfo('url'); ?>"><h1><?php bloginfo('name'); ?></h1></a>
         
     </div>
 	<div id="menu">
