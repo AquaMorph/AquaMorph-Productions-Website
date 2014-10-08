@@ -227,6 +227,25 @@ body {
 .navigation #left a {
 	float:left;
 }
+.content {
+	background-color:#ffffff;
+	box-shadow: 0 .2em .5em #888888;
+	padding:1em 1em 1em 1em;
+	margin-bottom:1.5em;
+	font-family:Helvetica;
+}
+.content p {
+	color:#3ea9f5;
+	font-size:1.2em;
+	margin:0 0 0 0;
+}
+.content a, .content a:visited {
+	color:#3ea9f5;
+}
+.content img {
+	width:100%;
+	height:auto;
+}
 /* Footer */
 .footer {
 	width:100%;

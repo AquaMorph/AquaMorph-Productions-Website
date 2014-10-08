@@ -11,4 +11,6 @@ if (function_exists('add_theme_support')) {
 	add_image_size('sidebar-thumb', 270, 64, true);
 	add_image_size('nav', 240, 240, true);
 }
+
+show_admin_bar( false );
 ?>
